@@ -17,7 +17,7 @@
 // expect(data).toEqual({one: 1, two: 2})
 // });
 
-test('null is falsy', ()=>{
+test('null, 0, false, NaN, & undefined are falsy', ()=>{
     // Checks for 0, false, NaN, undefined or null
     const myEmptyString = '';
 
@@ -27,4 +27,11 @@ test('null is falsy', ()=>{
     expect(NaN).toBeFalsy()
     expect(null).toBeFalsy()
     expect(undefined).toBeFalsy()
+})
+
+
+test('1, {} & [] are truthy',()=>{
+    expect(1).toBeTruthy()
+    expect({}).toBeTruthy()
+    expect([]).toBeTruthy()
 })
