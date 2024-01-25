@@ -1,0 +1,1 @@
+const fetchPromise = require('./fetchPromise');
