@@ -9,6 +9,9 @@ test('Spying on a method of an object', ()=> {
     const spy = jest.spyOn(video, 'play');
     video.play();
 
+    // Check if the play function has been called
     expect(spy).toHaveBeenCalled();
+    // Restore original implementation of function after it has been spied on
+    // so we no longer use the mock version
     spy.mockRestore();
 })
