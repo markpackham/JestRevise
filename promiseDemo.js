@@ -4,4 +4,10 @@ function fetchPromise(){
     });
 }
 
-module.exports = fetchPromise;
+function fetchPromiseReject(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => reject('error'),1000);
+    });
+}
+
+module.exports = {fetchPromise, fetchPromiseReject};
